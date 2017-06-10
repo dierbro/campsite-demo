@@ -2,8 +2,14 @@
 
 @import "normalize-rails";
 
-@import "bourbon";
-@import "neat";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-@import "base/base";
-@import "refills/flashes";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
