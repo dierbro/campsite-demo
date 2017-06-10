@@ -25,6 +25,7 @@ gem "uglifier"
 
 group :development do
   gem "listen"
+  gem "rails-erd"
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
