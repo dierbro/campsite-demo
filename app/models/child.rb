@@ -1,4 +1,9 @@
 class Child < ApplicationRecord
+  include PgSearch
+
+  pg_search_scope :search_by_name, against: :name,
+                                   using: { tsearch: { prefix: true } }
+
   default_scope { order(name: :asc) }
   scope :checked_in, (-> { where(state: :checked_in) })
   scope :not_checked_out, (-> { where.not(state: :checked_out) })

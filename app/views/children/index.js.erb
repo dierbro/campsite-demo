@@ -1,0 +1,4 @@
+$("#child-count").html("<%= j render(partial: 'count',  locals: { children: @children }) %>")
+<% unless @only_count %>
+  $("#children").html("<%= j render(partial: 'list',  locals: { children: @children }) %>")
+<% end %>

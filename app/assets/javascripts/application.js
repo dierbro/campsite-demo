@@ -13,5 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require bootstrap-dialog
 
 //= require_tree .
+
+function refreshChildrenCount(){
+  searchEl =  $("input#child-search")[0]
+  $.ajax({
+    type: "GET",
+    dataType: "script",
+    url: $(searchEl).data("search-url"), 
+    data: { q: $(searchEl).val(), only_count: true }
+  });
+}

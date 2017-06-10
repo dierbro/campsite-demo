@@ -1,0 +1,7 @@
+<% if children.none? %>
+  <h3 class="text-center">There are no children available.</h3>
+<% else %>
+  <ul class="list-group">
+    <%= render children %>
+  </ul>
+<% end %>

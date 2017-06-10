@@ -1,0 +1,55 @@
+.children{
+  $child-pending-bg: $brand-danger;
+  $child-checked-in-bg: $brand-primary;
+  $child-checked-out-bg: $brand-success;
+
+  .child-pending{
+    background-color: $child-pending-bg;
+  }
+
+  a.list-group-item{
+    height: 70px;
+    font-weight: bold;
+  }
+
+  a.list-group-item.child-pending:hover {
+    background-color: darken($child-pending-bg, 6.5%)
+  }
+
+  .child-checked-in{
+    background-color: $child-checked-in-bg;
+  }
+  a.list-group-item.child-checked-in:hover {
+    background-color: darken($child-checked-in-bg, 6.5%);
+  }
+
+  .child-checked-out{
+    background-color: $child-checked-out-bg;
+  }
+  a.list-group-item.child-checked-out:hover {
+    background-color: darken($child-checked-out-bg, 6.5%);
+  }
+
+  #children{
+    padding-top: 20px;
+  }
+
+  .input-group{
+    width: 100%;
+    
+    input{
+      font-size: 16px;
+    }
+    label{
+      position: absolute;
+      left: 5px;
+      top: 2px;
+      z-index: 1000;
+      color: #555;
+    }
+
+    input{
+      padding-left: 40px;
+    }
+  }
+}

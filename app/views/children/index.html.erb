@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-2 vcenter">
+    <%= link_to campsite_activities_path(@campsite) do %>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle-o fa-stack-2x"></i>
+        <i class="fa fa-chevron-left fa-stack-1x"></i>
+      </span>
+    <% end %>
+  </div>
+  <div class="col-xs-8 text-center vcenter">
+    <h2><%= @activity&.name || "All Activities" %></h2>
+  </div>
+</div>
+
+<div id="child-count">
+  <%= render partial: 'count', locals: { children: @children } %>
+</div>
+
+<%= render partial: 'search', locals: { 
+  search_url: campsite_activity_children_path(@campsite, @activity || :all) } %>
+
+<div id="children">
+  <%= render partial: 'list', locals: { children: @children} %>
+</div>
+

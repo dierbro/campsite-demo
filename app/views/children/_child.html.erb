@@ -1,0 +1,18 @@
+<%= link_to child_path(child), id: dom_id(child), 
+  class: "list-group-item child-#{child.state.dasherize}", 
+method: :put, remote: true, 
+  data: (child.checked_out? ? { confirm: "Are you sure?" } : nil) do %>
+  <div class="row">
+    <div class="col-xs-9">
+      <%= child.name %>
+    </div>
+    <div class="col-xs-3 text-right">
+      <p>
+      <%= l(child.checked_in_at) unless child.checked_in_at.nil? %>
+      </p>
+      <p>
+      <%= l(child.checked_out_at) unless child.checked_out_at.nil? %>
+      </p>
+    </div>
+  </div>
+<% end %>
