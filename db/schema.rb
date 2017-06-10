@@ -32,11 +32,11 @@ ActiveRecord::Schema.define(version: 20170610055920) do
   create_table "children", force: :cascade do |t|
     t.string   "name"
     t.integer  "activity_id"
-    t.string   "state"
+    t.string   "state",          default: "pending"
     t.datetime "checked_in_at"
     t.datetime "checked_out_at"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.index ["activity_id"], name: "index_children_on_activity_id", using: :btree
   end
 
