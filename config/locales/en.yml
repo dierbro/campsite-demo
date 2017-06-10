@@ -9,11 +9,11 @@ en:
   time:
     formats:
       default:
-        "%a, %b %-d, %Y at %r"
+        "%H:%M"
       date:
         "%b %-d, %Y"
       short:
         "%B %d"
 
   titles:
-    application: Campsite-demo
+    application: Campsite Demo (dierbro)
